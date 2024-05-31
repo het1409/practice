@@ -33,16 +33,16 @@ st.write(df.style.highlight_max(axis=0, color = '#3CA99F').highlight_min(axis=0,
 #     'Select a range of age',
 #     15, 75, (25, 75)
 # )
-'Calculating the insurance...'
+
 latest_iteartion = st.empty()
 bar = st.progress(0)
 for i in range(100):
-    latest_iteartion.text(f'Iteration {i + 1}')
+    latest_iteartion.text(f'Making Visuals: Loading.... {i + 1}')
     bar.progress(i + 1)
     time.sleep(0.1)
 
-'...And its calculated'
-    
+'Task Completed Successfully'
+
 # Create a bar chart using Streamlit's built-in bar_chart method
 st.bar_chart(df.set_index('name')['sodium'])
 
